@@ -1,0 +1,228 @@
+$headerColor: #161f27;
+$mainColor: #202b38;
+$sectionColor: #202b38;
+$footerColor: #161f27;
+$darkColor: #040A0F;
+$primaryFontColor: white;
+$secondaryFontColor: #ffbe85;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "roboto", serif;
+    color: $primaryFontColor;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  body {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    grid-template-rows: auto 1fr auto; 
+    min-height: 100vh;
+  }
+
+  html, body {
+    height: 100%; 
+  }
+  
+  header {
+    background-color: $headerColor;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 0.5rem;
+    padding-bottom:0.5rem;
+    padding-right: 7rem;
+  }
+
+  
+  header h1 {
+    grid-column: 1;
+    display: flex;
+    align-self: center;
+    margin-left: 1rem;
+  }
+  
+  .LogoImage {
+    width: 80px;
+  }
+  
+  nav {
+    grid-column: 2;
+    background-color: $headerColor;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  nav a {
+    padding: 0.6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.7rem;
+    text-decoration: none;
+    background-color: $darkColor;
+    color: $primaryFontColor;
+    text-align: center;
+  }
+  
+  nav p{
+    float: left;
+    margin-left: 0.5rem;
+  }
+
+  .logout{
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+
+  .signup{
+    margin-right: 2.2rem;
+  }
+  
+
+  nav a:hover {
+    background-color: #202b38;
+    color: $secondaryFontColor;
+  }
+  
+  main {
+    position: relative;
+    overflow-y: auto;
+    background-color: $mainColor;
+    grid-row: 2;
+    grid-column: 1;
+
+    .post{
+      background-color: #1B2530;
+      padding: 1rem;
+      border-radius: 2rem;
+      margin: 1rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+
+    p{
+      padding: 0.5rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+    }
+    .meta{
+      font-style: italic;
+      opacity: 50%;
+    }
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 200px;
+  }
+
+  ::-webkit-scrollbar-track {
+    opacity: 0;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $headerColor; 
+    border-radius: 25px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $darkColor;
+    cursor: grab; 
+  }
+
+  section {
+    background-color: $sectionColor;
+    grid-row: 2;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 4px auto;
+  
+    
+
+    .sectionBorder{
+        background-color: $mainColor;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        opacity: 20%;
+        border-radius: 1rem;
+    }
+
+    .sectionContent{
+      display: grid;
+      grid-template-rows: auto 5vh;
+
+      
+      p{
+        grid-row: 1;
+        margin-left: 0.3rem;
+      }
+     }
+  }
+
+
+  .sectionNewPost{
+    z-index: 2;
+    background-color: $darkColor;
+    grid-column: 2;
+    border: 0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    width: 5vh;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    button{
+      background-color: $darkColor;
+      grid-column: 2;
+      border: 0;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      width: 2.5vh;
+      height: 2.5vh;
+      display: flex;
+      justify-self: right;
+    }
+    button:hover{
+      cursor: pointer;
+    }
+  }
+
+  footer {
+    background-color: $footerColor;
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*# sourceMappingURL=Style.css.map */

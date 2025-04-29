@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "roboto", serif;
+  color: white;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+html, body {
+  height: 100%;
+}
+
+header {
+  background-color: #161f27;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 7rem;
+}
+
+.comments {
+  background-color: #1B2530;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.comments p {
+  padding: 1rem;
+  word-wrap: break-word; /* breaks long words */
+  overflow-wrap: break-word; /* newer standard for the same thing */
+  white-space: normal; /* ensures text wraps normally */
+  overflow: hidden; /* hides overflowing content */
+  text-overflow: ellipsis;
+}
+.comments span {
+  padding: 1rem;
+}
+
+.comment {
+  background-color: #161f27;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  margin: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+header h1 {
+  grid-column: 1;
+  display: flex;
+  align-self: center;
+  margin-left: 1rem;
+}
+
+.LogoImage {
+  width: 80px;
+}
+
+nav {
+  grid-column: 2;
+  background-color: #161f27;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav a {
+  padding: 0.6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.7rem;
+  text-decoration: none;
+  background-color: #040A0F;
+  color: white;
+  text-align: center;
+}
+
+nav p {
+  float: left;
+  margin-left: 0.5rem;
+}
+
+.logout {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.signup {
+  margin-right: 2.2rem;
+}
+
+nav a:hover {
+  background-color: #202b38;
+  color: #ffbe85;
+}
+
+main {
+  position: relative;
+  overflow-y: auto;
+  background-color: #202b38;
+  grid-row: 2;
+  grid-column: 1;
+}
+main .post {
+  background-color: #1B2530;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+main p {
+  padding: 0.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+main .meta {
+  font-style: italic;
+  opacity: 50%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 200px;
+}
+
+::-webkit-scrollbar-track {
+  opacity: 0;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #161f27;
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #040A0F;
+  cursor: grab;
+}
+
+section {
+  background-color: #202b38;
+  grid-row: 2;
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 4px auto;
+}
+section .sectionBorder {
+  background-color: #202b38;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  opacity: 20%;
+  border-radius: 1rem;
+}
+section .sectionContent {
+  display: grid;
+  grid-template-rows: auto 5vh;
+}
+section .sectionContent p {
+  grid-row: 1;
+  margin-left: 0.3rem;
+}
+section .sectionContent .sectionNewPost {
+  display: flex;
+  margin-left: 0.3rem;
+  grid-row: 2;
+  justify-content: center;
+  align-items: center;
+}
+section .sectionContent .sectionNewPost a {
+  padding: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 0.7rem;
+  text-decoration: none;
+  background-color: #040A0F;
+  color: white;
+  text-align: center;
+}
+
+footer {
+  background-color: #161f27;
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.commentBox {
+  z-index: 3;
+  position: fixed; /* Changed from absolute to fixed */
+  background-color: rgba(4, 10, 15, 0.9);
+  right: 20rem;
+  bottom: 0;
+  width: 50%;
+  border-radius: 2rem 2rem 0 0;
+  padding: 1rem;
+  padding-bottom: 0;
+  padding-top: 0;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  opacity: 0%;
+  height: 0%;
+  transition: 1s;
+}
+
+h3 {
+  grid-row: 1;
+}
+
+textarea {
+  resize: none;
+  display: flex;
+  height: 200px;
+  width: 100%;
+  background-color: #161f27;
+  border: 0;
+  border-radius: 1rem;
+  color: white;
+  grid-row: 2;
+  outline: none;
+  padding: 0.5rem;
+}
+
+.objavi {
+  grid-row: 2;
+  background-color: #161f27;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  padding: 0.6rem;
+  float: right;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.objavi:hover {
+  background-color: #040A0F;
+  color: #ffbe85;
+  cursor: pointer;
+}
+
+.naslovKomentara {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.odustani {
+  background-color: #040A0F;
+  grid-column: 2;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  width: 2.5vh;
+  height: 2.5vh;
+  display: flex;
+  justify-self: right;
+}
+
+.odustani:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=viewPostStyle.css.map */

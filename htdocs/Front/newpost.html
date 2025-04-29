@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nova Objava</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css\newPostStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+    <p>Nova objava</p>
+
+    <form action="/Front/process-newpost.php" onsubmit="return validatePostForm()" method="POST" id="newpost" novalidate>
+        <div class="naslov">
+            <label for="naslov">Naslov</label> <br>
+            <input type="text" id="naslov" name="naslov">
+        </div>
+        
+        <div class="tekst">
+            <label for="Tekst">Tekst</label> <br>
+            <textarea id="tekst" name="tekst"></textarea>
+        </div>
+
+
+        <button class="objavi">Objavi</button>
+    </form>
+
+    <a href="index.php"><button class="natrag">Natrag</button></a>
+<body>
+
+<script>
+    function validatePostForm(){
+        var naslov = document.forms["newpost"]["naslov"].value;
+        var tekst = document.forms["newpost"]["tekst"].value;
+
+        if (naslov == ""){
+            alert("Upiši naslov!");
+            return false;
+        }
+        if (naslov.length>100){
+            alert("Maksimalna dužina naslova je 100 znakova!");
+            return false;
+        }
+
+        if (tekst == ""){
+            alert("Upiši tekst!");
+            return false;
+        }
+        if (tekst.length>1000){
+            alert("Maksimalna dužina teksta je 1000 znakova!");
+            return false;
+        }
+
+    }
+</script>
